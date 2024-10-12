@@ -1,3 +1,5 @@
+import "./App.css";
+
 import { useState, useEffect, useRef, KeyboardEvent } from "react";
 
 import { useDispatch } from "./store/store";
@@ -7,6 +9,7 @@ import { Header } from "./components/header/header";
 import { Input } from "./components/input/input";
 import { TodoList } from "./components/todoList/todoList";
 import { Control } from "./components/control/control";
+import { Footer } from "./components/footer/footer";
 
 export const App = () => {
   const [text, setText] = useState("");
@@ -43,7 +46,7 @@ export const App = () => {
           <Control />
         </section>
       </main>
-      <footer className="footer"></footer>
+      <Footer />
     </>
   );
 };

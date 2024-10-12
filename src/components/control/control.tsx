@@ -24,23 +24,29 @@ export const Control = () => {
   return (
     <div className="main__control">
       <span>{itemsLeftText}</span>
-      <div>
-        <Button
-          title="All"
-          isActive={currentFilter === "all"}
-          onClick={() => dispatch(setFilter("all"))}
-        />
-        <Button
-          title="Active"
-          isActive={currentFilter === "active"}
-          onClick={() => dispatch(setFilter("active"))}
-        />
-        <Button
-          title="Completed"
-          isActive={currentFilter === "completed"}
-          onClick={() => dispatch(setFilter("completed"))}
-        />
-      </div>
+      <ul>
+        <li>
+          <Button
+            title="All"
+            isActive={currentFilter === "all"}
+            onClick={() => dispatch(setFilter("all"))}
+          />
+        </li>
+        <li>
+          <Button
+            title="Active"
+            isActive={currentFilter === "active"}
+            onClick={() => dispatch(setFilter("active"))}
+          />
+        </li>
+        <li>
+          <Button
+            title="Completed"
+            isActive={currentFilter === "completed"}
+            onClick={() => dispatch(setFilter("completed"))}
+          />
+        </li>
+      </ul>
       <Button
         title="Clear completed"
         isActive={false}

@@ -29,7 +29,9 @@ html {
 
 body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
   margin: 0;
   font-family: var(--font-family);
   font-size: var(--main-font-size);
