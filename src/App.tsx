@@ -1,4 +1,4 @@
-import React from "react";
+import { Button } from "./components/button/button";
 
 function App() {
   return (
@@ -6,7 +6,13 @@ function App() {
       <header className="header">
         <h1 className="header__title">todos</h1>
       </header>
-      <main className="main"></main>
+      <main className="main">
+        <Button
+          title="add"
+          isActive={false}
+          onClick={() => console.log("Test click")}
+        />
+      </main>
       <footer className="footer"></footer>
     </>
   );

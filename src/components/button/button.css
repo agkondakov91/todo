@@ -1,0 +1,20 @@
+.todos__button {
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+}
+
+.todos__button-active {
+  outline: var(--border-active);
+  outline-offset: 3px;
+  border-radius: var(--border-radius);
+}
+
+@media (width >= 1024px) {
+  .todos__button:hover {
+    outline: var(--border-active);
+    outline-offset: 3px;
+    border-radius: var(--border-radius);
+  }
+}
