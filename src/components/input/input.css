@@ -1,0 +1,28 @@
+.todos__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.todos__icon {
+  position: absolute;
+  left: 16px;
+  background-image: url("../../images/arrow.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 10px;
+  height: 10px;
+}
+
+.todos__input {
+  padding: 0;
+  padding-inline-start: 40px;
+  width: clamp(18.75rem, 14.205rem + 22.73vw, 31.25rem);
+  height: 50px;
+  border: 1px solid var(--color-grey);
+}
+
+.todos__input::placeholder {
+  color: var(--color-grey);
+  font-style: italic;
+}
