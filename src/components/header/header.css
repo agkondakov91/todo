@@ -1,0 +1,7 @@
+.header__title {
+  font-size: 80px;
+  font-weight: 100;
+  letter-spacing: -5px;
+  text-align: center;
+  color: var(--color-accent);
+}

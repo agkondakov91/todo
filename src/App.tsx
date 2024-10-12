@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, KeyboardEvent } from "react";
 
+import { Header } from "./components/header/header";
 import { Input } from "./components/input/input";
 import { Control } from "./components/control/control";
 
@@ -22,16 +23,18 @@ export const App = () => {
   return (
     <>
       <header className="header">
-        <h1 className="header__title">todos</h1>
+        <Header title="todos" />
       </header>
       <main className="main">
-        <Input
-          text={text}
-          handleInputChange={setText}
-          handleAddTodo={handleAddTask}
-          inputRef={inputRef}
-        />
-        <Control />
+        <section aria-label="todo list">
+          <Input
+            text={text}
+            handleInputChange={setText}
+            handleAddTodo={handleAddTask}
+            inputRef={inputRef}
+          />
+          <Control />
+        </section>
       </main>
       <footer className="footer"></footer>
     </>
