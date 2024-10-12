@@ -16,7 +16,7 @@ export const TodoItem = (props: TTodo) => {
           onChange={() => dispatch(toggleTodoCompleted(props.id))}
         />
         <span></span>
-        <p className="main__list-item-text"></p>
+        <p className="main__list-item-text">{props.text}</p>
       </label>
     </li>
   );

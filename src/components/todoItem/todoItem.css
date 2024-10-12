@@ -1,0 +1,50 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.main__list-item {
+  padding-inline-start: 10px;
+  width: clamp(18.75rem, 14.205rem + 22.73vw, 31.25rem);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid var(--color-grey);
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+label span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--color-grey);
+  border-radius: 50%;
+}
+
+input[type="checkbox"]:checked + span {
+  border: 1px solid #79c1b0;
+  background-image: url("../../images/done.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input[type="checkbox"]:checked ~ .main__list-item-text {
+  text-decoration: line-through;
+  color: var(--color-grey);
+}
+
+input[type="checkbox"]:focus-visible + span {
+  outline: 2px solid black;
+  outline-offset: 0;
+}

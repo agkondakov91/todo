@@ -1,11 +1,16 @@
 import { useState, useEffect, useRef, KeyboardEvent } from "react";
 
+import { useDispatch } from "./store/store";
+import { addTodo } from "./store/todoSlice";
+
 import { Header } from "./components/header/header";
 import { Input } from "./components/input/input";
+import { TodoList } from "./components/todoList/todoList";
 import { Control } from "./components/control/control";
 
 export const App = () => {
   const [text, setText] = useState("");
+  const dispatch = useDispatch();
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -16,7 +21,8 @@ export const App = () => {
 
   const handleAddTask = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
-      console.log("Test to add todo");
+      dispatch(addTodo(text));
+      setText("");
     }
   };
 
@@ -33,6 +39,7 @@ export const App = () => {
             handleAddTodo={handleAddTask}
             inputRef={inputRef}
           />
+          <TodoList />
           <Control />
         </section>
       </main>
