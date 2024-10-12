@@ -6,7 +6,7 @@ export type TTodo = {
   completed: boolean;
 };
 
-type TTodosState = {
+export type TTodosState = {
   list: TTodo[];
   filter: "all" | "active" | "completed";
 };
