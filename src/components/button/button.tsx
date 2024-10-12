@@ -10,7 +10,7 @@ export const Button = (props: TButtonProps) => {
   return (
     <button
       className={
-        props.isActive ? "todos__button todos__button-active" : "todos__button"
+        props.isActive ? "main__button main__button-active" : "main__button"
       }
       onClick={props.onClick}
     >

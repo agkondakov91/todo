@@ -1,10 +1,10 @@
-.todos__container {
+.main__container {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.todos__icon {
+.main__icon {
   position: absolute;
   left: 16px;
   background-image: url("../../images/arrow.png");
@@ -14,7 +14,7 @@
   height: 10px;
 }
 
-.todos__input {
+.main__input {
   padding: 0;
   padding-inline-start: 40px;
   width: clamp(18.75rem, 14.205rem + 22.73vw, 31.25rem);
@@ -22,7 +22,7 @@
   border: 1px solid var(--color-grey);
 }
 
-.todos__input::placeholder {
+.main__input::placeholder {
   color: var(--color-grey);
   font-style: italic;
 }

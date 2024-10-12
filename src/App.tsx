@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, KeyboardEvent } from "react";
 
-import { Button } from "./components/button/button";
 import { Input } from "./components/input/input";
+import { Control } from "./components/control/control";
 
 export const App = () => {
   const [text, setText] = useState("");
@@ -25,17 +25,13 @@ export const App = () => {
         <h1 className="header__title">todos</h1>
       </header>
       <main className="main">
-        <Button
-          title="add"
-          isActive={false}
-          onClick={() => console.log("Test click")}
-        />
         <Input
           text={text}
           handleInputChange={setText}
           handleAddTodo={handleAddTask}
           inputRef={inputRef}
         />
+        <Control />
       </main>
       <footer className="footer"></footer>
     </>

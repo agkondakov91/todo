@@ -9,11 +9,11 @@ type TInputProps = {
 
 export const Input = (props: TInputProps) => {
   return (
-    <div className="todos__container">
-      <div className="todos__icon"></div>
+    <div className="main__container">
+      <div className="main__icon"></div>
       <input
         type="text"
-        className="todos__input"
+        className="main__input"
         placeholder="What needs to be done?"
         value={props.text}
         ref={props.inputRef}

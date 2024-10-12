@@ -1,0 +1,30 @@
+.main__control {
+  padding-inline: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: clamp(18.75rem, 14.205rem + 22.73vw, 31.25rem);
+  height: 50px;
+  font-size: 12px;
+  background-color: white;
+  color: gray;
+  border: 1px solid var(--color-grey);
+}
+
+.main__control div {
+  display: flex;
+  gap: clamp(0.438rem, -0.021rem + 1.1vw, 0.938rem);
+}
+
+@media (width <= 670px) {
+  .main__control {
+    padding-block: 20px;
+    height: 250px;
+    flex-direction: column;
+  }
+
+  .main__control div {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
